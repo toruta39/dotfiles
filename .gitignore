@@ -1,4 +1,5 @@
 *.DS_Store
 *.LSOverride
+Session.vim
 Thumbs.db
 .bundle

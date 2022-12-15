@@ -1,8 +1,8 @@
 [user]
-  name = Jeff Geerling
-  email = geerlingguy@mac.com
+	name = Joshua Zhang
+	email = toruta39@gmail.com
 [core]
-  editor = vi
+  editor = vim
   excludesfile = ~/.gitignore
   autocrlf = input
 [color]
@@ -11,7 +11,7 @@
   interactive = auto
   status = auto
 [init]
-  defaultBranch = master
+  defaultBranch = main
 [web]
   browser = google-chrome
 [credential]
@@ -19,7 +19,7 @@
 [push]
   default = simple
 [merge]
-  tool = kdiff3
+  tool = vimdiff
 [difftool]
   prompt = false
 [alias]
@@ -32,3 +32,8 @@
   l = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
 [pull]
 	rebase = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
