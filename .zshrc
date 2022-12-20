@@ -128,3 +128,6 @@ export COMPOSER_MEMORY_LIMIT=-1
 
 # asdf
 . $(brew --prefix)/opt/asdf/libexec/asdf.sh
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
