@@ -13,7 +13,7 @@ export CLICOLOR_FORCE=1
 unsetopt nomatch
 
 # Nicer prompt.
-export PS1=$'\n'"%F{green} %*%F %3~ %F{white}"$'\n'"$ "
+export PS1=$'\n'"%F{green} %*%F %F{white}%3~ %F{white}"$'\n'"$ "
 
 # Enable plugins.
 plugins=(git brew history kubectl history-substring-search)
@@ -126,8 +126,75 @@ export COMPOSER_MEMORY_LIMIT=-1
 #shopt -s extdebug
 #trap prod_command_trap DEBUG
 
+export SVN_EDITOR="vim"
+export GIT_EDITOR="vim"
+export EDITOR="vim"
+export VISUAL="vim"
+
 # asdf
 . $(brew --prefix)/opt/asdf/libexec/asdf.sh
 
+# go
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
+
+# android sdk
+export ANDROID_HOME=${HOME}/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/tools/bin
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+# jdk
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-15.jdk/Contents/Home
+else
+  # Ubuntu
+  export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+fi
+export PATH=${PATH}:${JAVA_HOME}/bin
+
+# gcloud
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # The next line updates PATH for the Google Cloud SDK.
+  if [ -f "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ]; then source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"; fi
+  # The next line enables shell command completion for gcloud.
+  if [ -f "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ]; then source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"; fi
+fi
+
+ulimit -n 1200
+
+# alias
+alias c='clear'
+alias dc='docker-compose'
+alias tf='terraform'
+alias k='kubectl'
+
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND="ag --hidden --ignore .git -f --depth 5 -g ''"
+
+# wsl docker
+if [ ! -z $WSL_DISTRO_NAME ]; then
+  # export DOCKER_HOST="tcp://localhost:2375"
+fi
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# gh
+eval "$(gh completion -s zsh)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(${HOME}/anaconda3/bin/conda 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "${HOME}/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "${HOME}/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="${HOME}/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
