@@ -1,0 +1,16 @@
+# Git aliases.
+alias gs='git status'
+alias gc='git commit'
+alias gco='git switch'
+alias gp='git push'
+alias gfm='git pull --rebase'
+alias gcam='git commit -am'
+alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+
+# alias
+alias c='clear'
+alias dc='docker-compose'
+alias tf='terraform'
+alias k='kubectl'
+alias e=$EDITOR
+

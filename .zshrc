@@ -12,12 +12,6 @@ export CLICOLOR_FORCE=1
 # Don't require escaping globbing characters in zsh.
 unsetopt nomatch
 
-# Nicer prompt.
-export PS1=$'\n'"%F{green} %*%F %F{white}%3~ %F{white}"$'\n'"$ "
-
-# Enable plugins.
-plugins=(git brew history kubectl history-substring-search)
-
 # Custom $PATH with extra locations.
 export PATH=$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/go/bin:/usr/local/git/bin:$HOME/.composer/vendor/bin:$PATH
 
@@ -44,13 +38,6 @@ fi
 source ${share_path}/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
-
-# Git aliases.
-alias gs='git status'
-alias gc='git commit'
-alias gp='git pull --rebase'
-alias gcam='git commit -am'
-alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
 # Completions.
 autoload -Uz compinit && compinit
@@ -163,12 +150,6 @@ fi
 
 ulimit -n 1200
 
-# alias
-alias c='clear'
-alias dc='docker-compose'
-alias tf='terraform'
-alias k='kubectl'
-
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND="ag --hidden --ignore .git -f --depth 5 -g ''"
@@ -180,9 +161,6 @@ fi
 
 # direnv
 eval "$(direnv hook zsh)"
-
-# gh
-eval "$(gh completion -s zsh)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -198,3 +176,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# spaceship
+source $(brew --prefix)/opt/spaceship/spaceship.zsh
