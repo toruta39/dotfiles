@@ -8,6 +8,7 @@ alias gcam='git commit -am'
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
 # alias
+alias la='ls -la'
 alias c='clear'
 alias dc='docker-compose'
 alias tf='terraform'
