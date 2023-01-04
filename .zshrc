@@ -169,3 +169,10 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# zsh compsys
+if [[ -z "$NOMENU" ]] ; then
+  zstyle ':completion:*' menu select=2 # if there are more than 5 options allow selecting from a menu
+else
+  setopt no_auto_menu # don't use any menus at all
+fi
