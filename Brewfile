@@ -6,6 +6,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "hpedrorodrigues/tools"
+tap "microsoft/git"
 tap "tmspzz/tap"
 brew "autoconf"
 brew "openssl@3"
@@ -57,6 +58,7 @@ cask "dash", args: { appdir: "/Applications" }
 cask "docker", args: { appdir: "/Applications" }
 cask "dockutil"
 cask "font-jetbrains-mono", args: { appdir: "/Applications" }
+cask "git-credential-manager-core"
 cask "google-cloud-sdk", args: { appdir: "/Applications" }
 cask "graphql-playground", args: { appdir: "/Applications" }
 cask "iterm2", args: { appdir: "/Applications" }
