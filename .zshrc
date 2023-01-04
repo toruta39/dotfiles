@@ -15,6 +15,11 @@ unsetopt nomatch
 # Custom $PATH with extra locations.
 export PATH=$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/go/bin:/usr/local/git/bin:$HOME/.composer/vendor/bin:$PATH
 
+export SVN_EDITOR="vim"
+export GIT_EDITOR="vim"
+export EDITOR="vim"
+export VISUAL="vim"
+
 # Bash-style time output.
 export TIMEFMT=$'\nreal\t%*E\nuser\t%*U\nsys\t%*S'
 
@@ -112,11 +117,6 @@ export COMPOSER_MEMORY_LIMIT=-1
 #}
 #shopt -s extdebug
 #trap prod_command_trap DEBUG
-
-export SVN_EDITOR="vim"
-export GIT_EDITOR="vim"
-export EDITOR="vim"
-export VISUAL="vim"
 
 # asdf
 . $(brew --prefix)/opt/asdf/libexec/asdf.sh
