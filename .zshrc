@@ -90,6 +90,11 @@ dockrun() {
  docker run -it geerlingguy/docker-"${1:-ubuntu1604}"-ansible /bin/bash
 }
 
+# Run a mysql container
+mysqlrun() {
+ docker run -d -p 3306:3306 --env MYSQL_USER=mysql --env MYSQL_PASSWORD=mysql --env MYSQL_ALLOW_EMPTY_PASSWORD=yes --env MYSQL_DATABASE=sandbox --name=mysql mysql
+}
+
 # Enter a running Docker container.
 function denter() {
  if [[ ! "$1" ]] ; then
@@ -110,9 +115,6 @@ knownrm() {
    sed -i '' "$1d" ~/.ssh/known_hosts
  fi
 }
-
-# asdf
-. $(brew --prefix)/opt/asdf/libexec/asdf.sh
 
 # go
 export GOPATH="$HOME/go"
@@ -176,3 +178,6 @@ if [[ -z "$NOMENU" ]] ; then
 else
   setopt no_auto_menu # don't use any menus at all
 fi
+
+# asdf
+. $(brew --prefix)/opt/asdf/libexec/asdf.sh
