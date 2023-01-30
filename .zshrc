@@ -13,7 +13,7 @@ export CLICOLOR_FORCE=1
 unsetopt nomatch
 
 # Custom $PATH with extra locations.
-export PATH=$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/go/bin:/usr/local/git/bin:$HOME/.composer/vendor/bin:$PATH
+export PATH=$HOME/Library/Python/3.9/bin:$(brew --prefix)/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/go/bin:/usr/local/git/bin:$HOME/.composer/vendor/bin:$PATH
 
 export SVN_EDITOR="vim"
 export GIT_EDITOR="vim"
@@ -33,7 +33,7 @@ fi
 bindkey -e
 
 # zplug
-export ZPLUG_HOME=/opt/homebrew/opt/zplug
+export ZPLUG_HOME=$(brew --prefix)/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
@@ -138,9 +138,9 @@ export PATH=${PATH}:${JAVA_HOME}/bin
 # gcloud
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # The next line updates PATH for the Google Cloud SDK.
-  if [ -f "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ]; then source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"; fi
+  if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ]; then source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"; fi
   # The next line enables shell command completion for gcloud.
-  if [ -f "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ]; then source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"; fi
+  if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ]; then source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"; fi
 fi
 
 ulimit -n 1200
