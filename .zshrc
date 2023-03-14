@@ -44,7 +44,6 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
-zplug "spaceship-prompt/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -181,3 +180,8 @@ fi
 
 # asdf
 . $(brew --prefix)/opt/asdf/libexec/asdf.sh
+
+# starship
+if command -v starship &> /dev/null; then
+  eval "$(starship init zsh)"
+fi
