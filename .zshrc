@@ -185,3 +185,6 @@ fi
 if command -v starship &> /dev/null; then
   eval "$(starship init zsh)"
 fi
+
+# cuda
+export CUDA_HOME=/usr/local/cuda
