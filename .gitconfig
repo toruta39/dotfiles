@@ -38,3 +38,5 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[includeIf "gitdir:~/rktdev/"]
+  path = ~/.config/gitconfig/rktdev.inc
