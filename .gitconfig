@@ -16,6 +16,7 @@
   browser = google-chrome
 [credential]
   helper = osxkeychain
+	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [push]
   default = simple
@@ -40,3 +41,5 @@
 	smudge = git-lfs smudge -- %f
 [includeIf "gitdir:~/rktdev/"]
   path = ~/.config/gitconfig/rktdev.inc
+[credential "https://dev.azure.com"]
+	useHttpPath = true
