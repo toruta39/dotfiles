@@ -43,3 +43,5 @@
   path = ~/.config/gitconfig/rktdev.inc
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
