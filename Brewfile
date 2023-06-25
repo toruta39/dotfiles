@@ -3,6 +3,7 @@ tap "github/gh"
 tap "go-task/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
+tap "homebrew/core"
 tap "hpedrorodrigues/tools"
 tap "microsoft/git"
 tap "tmspzz/tap"
@@ -62,6 +63,7 @@ cask "1password"
 cask "alfred", args: { appdir: "/Applications" }
 cask "android-studio"
 cask "anki", args: { appdir: "/Applications" }
+cask "blender-benchmark"
 cask "brave-browser", args: { appdir: "/Applications" }
 cask "caffeine", args: { appdir: "/Applications" }
 cask "charles", args: { appdir: "/Applications" }
@@ -74,9 +76,11 @@ cask "git-credential-manager-core"
 cask "google-cloud-sdk", args: { appdir: "/Applications" }
 cask "graphql-playground", args: { appdir: "/Applications" }
 cask "licecap", args: { appdir: "/Applications" }
+cask "nextcloud"
 cask "ngrok", args: { appdir: "/Applications" }
 cask "notion", args: { appdir: "/Applications" }
 cask "obsidian", args: { appdir: "/Applications" }
+cask "raspberry-pi-imager"
 cask "scroll-reverser", args: { appdir: "/Applications" }
 cask "sequel-ace", args: { appdir: "/Applications" }
 cask "slack", args: { appdir: "/Applications" }
