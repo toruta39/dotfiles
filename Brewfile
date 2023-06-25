@@ -88,7 +88,6 @@ cask "spotify", args: { appdir: "/Applications" }
 cask "textexpander", args: { appdir: "/Applications" }
 cask "the-unarchiver", args: { appdir: "/Applications" }
 cask "todoist"
-cask "transmit", args: { appdir: "/Applications" }
 cask "tunnelblick", args: { appdir: "/Applications" }
 cask "viber", args: { appdir: "/Applications" }
 cask "visual-studio-code", args: { appdir: "/Applications" }
