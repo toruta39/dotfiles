@@ -61,6 +61,11 @@ if zplug check "zsh-users/zsh-history-substring-search"; then
   bindkey "^[[B" history-substring-search-down
 fi
 
+# homebrew
+eval "$(brew shellenv)"
+# Tell homebrew to not autoupdate every single time I run it (just once a week).
+export HOMEBREW_AUTO_UPDATE_SECS=604800
+
 # Git upstream branch syncer.
 # Usage: gsync master (checks out master, pull upstream, push origin).
 function gsync() {
@@ -79,9 +84,6 @@ function gsync() {
  git pull upstream "$1" && \
  git push origin "$1"
 }
-
-# Tell homebrew to not autoupdate every single time I run it (just once a week).
-export HOMEBREW_AUTO_UPDATE_SECS=604800
 
 # Super useful Docker container oneshots.
 # Usage: dockrun, or dockrun [centos7|fedora27|debian9|debian8|ubuntu1404|etc.]
