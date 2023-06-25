@@ -8,8 +8,6 @@ tap "homebrew/core"
 tap "hpedrorodrigues/tools"
 tap "microsoft/git"
 tap "tmspzz/tap"
-brew "openssl@1.1"
-brew "python@3.11"
 brew "ansible", link: false
 brew "autoconf"
 brew "openssl@3"
@@ -62,6 +60,7 @@ brew "yq"
 brew "zplug"
 brew "go-task/tap/go-task"
 brew "tmspzz/tap/rome"
+cask "1password"
 cask "alfred", args: { appdir: "/Applications" }
 cask "android-studio"
 cask "anki", args: { appdir: "/Applications" }
@@ -76,7 +75,6 @@ cask "font-jetbrains-mono", args: { appdir: "/Applications" }
 cask "git-credential-manager-core"
 cask "google-cloud-sdk", args: { appdir: "/Applications" }
 cask "graphql-playground", args: { appdir: "/Applications" }
-cask "iterm2", args: { appdir: "/Applications" }
 cask "licecap", args: { appdir: "/Applications" }
 cask "ngrok", args: { appdir: "/Applications" }
 cask "notion", args: { appdir: "/Applications" }
@@ -87,10 +85,12 @@ cask "slack", args: { appdir: "/Applications" }
 cask "spotify", args: { appdir: "/Applications" }
 cask "textexpander", args: { appdir: "/Applications" }
 cask "the-unarchiver", args: { appdir: "/Applications" }
+cask "todoist"
 cask "transmit", args: { appdir: "/Applications" }
 cask "tunnelblick", args: { appdir: "/Applications" }
 cask "viber", args: { appdir: "/Applications" }
 cask "visual-studio-code", args: { appdir: "/Applications" }
+cask "warp"
 vscode "apollographql.vscode-apollo"
 vscode "CodeSandbox-io.codesandbox-projects"
 vscode "cweijan.vscode-mysql-client2"
