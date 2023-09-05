@@ -121,6 +121,9 @@ knownrm() {
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 
+# rancher desktop
+export PATH=$PATH:$HOME/.rd/bin
+
 # android sdk
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
@@ -194,3 +197,4 @@ export PATH=$PATH:$CUDA_HOME/bin
 
 # autojump
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
