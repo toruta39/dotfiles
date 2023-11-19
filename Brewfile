@@ -59,6 +59,7 @@ brew "the_silver_searcher"
 brew "tig"
 brew "tmux"
 brew "vim"
+brew "watch"
 brew "wget"
 brew "wrk"
 brew "yarn"
@@ -72,11 +73,13 @@ cask "amethyst"
 cask "android-studio"
 cask "anki", args: { appdir: "/Applications" }
 cask "arc"
+cask "blender"
 cask "blender-benchmark"
 cask "brave-browser", args: { appdir: "/Applications" }
 cask "caffeine", args: { appdir: "/Applications" }
 cask "charles", args: { appdir: "/Applications" }
 cask "chromedriver", args: { appdir: "/Applications" }
+cask "cursor"
 cask "dash", args: { appdir: "/Applications" }
 cask "dockutil"
 cask "font-jetbrains-mono", args: { appdir: "/Applications" }
@@ -87,6 +90,7 @@ cask "licecap", args: { appdir: "/Applications" }
 cask "nextcloud"
 cask "ngrok", args: { appdir: "/Applications" }
 cask "notion", args: { appdir: "/Applications" }
+cask "obs"
 cask "obsidian", args: { appdir: "/Applications" }
 cask "rancher"
 cask "raspberry-pi-imager"
@@ -94,6 +98,7 @@ cask "scroll-reverser", args: { appdir: "/Applications" }
 cask "sequel-ace", args: { appdir: "/Applications" }
 cask "slack", args: { appdir: "/Applications" }
 cask "spotify", args: { appdir: "/Applications" }
+cask "steam"
 cask "textexpander", args: { appdir: "/Applications" }
 cask "the-unarchiver", args: { appdir: "/Applications" }
 cask "todoist"
@@ -101,6 +106,7 @@ cask "tunnelblick", args: { appdir: "/Applications" }
 cask "utm"
 cask "viber", args: { appdir: "/Applications" }
 cask "visual-studio-code", args: { appdir: "/Applications" }
+cask "vlc"
 cask "warp"
 vscode "apollographql.vscode-apollo"
 vscode "cesium.gltf-vscode"
@@ -114,6 +120,7 @@ vscode "esbenp.prettier-vscode"
 vscode "fabiospampinato.vscode-diff"
 vscode "GitHub.codespaces"
 vscode "GitHub.copilot"
+vscode "GitHub.copilot-chat"
 vscode "GitHub.copilot-labs"
 vscode "github.vscode-github-actions"
 vscode "GitHub.vscode-pull-request-github"
