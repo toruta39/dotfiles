@@ -106,7 +106,6 @@ cask "slack", args: { appdir: "/Applications" }
 cask "sony-ps-remote-play"
 cask "spotify", args: { appdir: "/Applications" }
 cask "steam"
-cask "textexpander", args: { appdir: "/Applications" }
 cask "the-unarchiver", args: { appdir: "/Applications" }
 cask "todoist"
 cask "tunnelblick", args: { appdir: "/Applications" }
