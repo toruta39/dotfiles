@@ -41,7 +41,7 @@
 	smudge = git-lfs smudge -- %f
 [includeIf "gitdir:~/rktdev/"]
   path = ~/.config/gitconfig/rktdev.inc
-[credential "https://dev.azure.com"]
-	useHttpPath = true
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[credential "https://dev.azure.com"]
+	useHttpPath = true
