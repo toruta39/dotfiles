@@ -1,9 +1,0 @@
-# alias
-alias la='ls -la'
-alias c='clear'
-alias dc='docker compose'
-alias e=$EDITOR
-alias g='git'
-alias gc='gcloud'
-alias k='kubectl'
-alias tf='terraform'
