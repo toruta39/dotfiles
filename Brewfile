@@ -9,7 +9,6 @@ cask "dash", args: { appdir: "/Applications" }
 cask "discord"
 cask "font-jetbrains-mono", args: { appdir: "/Applications" }
 cask "kindle"
-cask "loupedeck"
 cask "nextcloud"
 cask "obsidian", args: { appdir: "/Applications" }
 cask "orbstack"
