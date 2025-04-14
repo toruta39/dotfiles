@@ -18,6 +18,7 @@ cask "spotify", args: { appdir: "/Applications" }
 cask "steam"
 cask "the-unarchiver", args: { appdir: "/Applications" }
 cask "typinator"
+cask "visual-studio-code"
 cask "vlc"
 cask "warp"
 cask "wpsoffice"
